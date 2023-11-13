@@ -1,10 +1,10 @@
 const express = require('express');
 const router = express.Router()
-const {authenticate, addAdmin} = require('../Controllers/adminController');
+const {loginAdmin, addAdmin} = require('../Controllers/adminController');
 
 
 // check the password and username
-router.post('/signin', authenticate)
+router.post('/', loginAdmin)
 
 
 // Create a new record
